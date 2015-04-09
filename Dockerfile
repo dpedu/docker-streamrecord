@@ -24,7 +24,7 @@ COPY supervisor.conf /etc/supervisor/conf.d/supervisor.conf
 # Install python app code
 COPY streamrecord/ /home/streamrecord/app/
 RUN chown -R streamrecord  /home/streamrecord/app ; \
-    su -c "mkdir /home/streamrecord/app/files /home/streamrecord/app/files/output /home/streamrecord/app/temp /home/streamrecord/app/sessions" streamrecord ; \
+    su -c "mkdir /home/streamrecord/app/files /home/streamrecord/app/files/output /home/streamrecord/app/files/temp /home/streamrecord/app/sessions" streamrecord ; \
     rm -rf /etc/cron*
 
 EXPOSE 80
