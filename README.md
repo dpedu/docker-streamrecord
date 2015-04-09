@@ -1,5 +1,5 @@
-docker-streamrec
-================
+docker-streamrecord
+===================
 
 An internet radio DVR packaged inside docker.
 
