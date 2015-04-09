@@ -1,0 +1,16 @@
+server {
+        listen 80;
+        #listen [::]:80 ipv6only=on;
+        root /usr/share/nginx/html/;
+        include uwsgi_params;
+
+        access_log /var/log/nginx/stremrecord.log;
+
+        location / {
+                uwsgi_pass 127.0.0.1:3330;
+        }
+        location /static/ {
+		autoindex on;
+                alias /home/streamrecord/app/static/;
+        }
+}
