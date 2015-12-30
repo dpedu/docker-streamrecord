@@ -28,4 +28,4 @@ RUN chown -R streamrecord  /home/streamrecord/app ; \
     rm -rf /etc/cron*
 
 EXPOSE 80
-
+ENTRYPOINT ["supervisord"]
